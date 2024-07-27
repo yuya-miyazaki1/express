@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var notesRouter = require('./routes/notes');//第6回で追加した
+var catRouter = require('./routes/cat');//第8回で追加した
 var dogRouter = require('./routes/dog');//第8回で追加した
 
 var app = express();
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/notes', notesRouter);//第6回で追加した
+app.use('/cat', catRouter);//第8回で追加した
 app.use('/dog', dogRouter);//第8回で追加した
 
 // catch 404 and forward to error handler
